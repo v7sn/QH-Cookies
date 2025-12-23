@@ -8,12 +8,11 @@
 	<title>QH Cookies</title>
 
 	<!-- Description -->
-	<meta name="description" content="">
+	<meta name="description" content="كوكيز طازج ومميز بأجود المكونات. اطلب الآن واستمتع بطعم لا يقاوم.">
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
@@ -26,7 +25,7 @@
 	<link rel="icon" href="/img/logo.jpg" type="image/png">
 
 	<!-- Theme / PWA -->
-	<meta name="theme-color" content="#fff">
+	<meta name="theme-color" content="#6F4E37">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<meta name="mobile-web-app-capable" content="yes">
@@ -46,7 +45,109 @@
 
 <body>
 
-	QH Cookies
+	<!-- Header -->
+	<header id="header">
+		<div class="container">
+			<nav>
+				<div class="logo-container">
+					<img src="/img/logo.jpg" alt="QH Cookies Logo" class="logo-img">
+					<span class="brand">QH Cookies</span>
+				</div>
+				<div class="nav-actions">
+					<button class="cart-icon-btn" id="cartBtn">
+						<i class="fa-solid fa-basket-shopping"></i>
+						<span class="cart-count">0</span>
+					</button>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="container" style="display: flex; align-items: center;">
+				<div class="hero-content">
+					<h1 class="hero-title">تذوق <span>الفرق</span> <br> في كل قطعة</h1>
+					<p class="hero-subtitle">نخبز لك الكوكيز يدويًا وبكل حب، باستخدام أجود أنواع الشوكولاتة والمكونات
+						الطازجة لتجربة لا تُنسى.</p>
+					<a href="#menu" class="hero-cta">اطلب الآن</a>
+				</div>
+				<div class="hero-image-container">
+					<img src="/img/hero.png" alt="كوكيز لذيذ" class="hero-main-img">
+				</div>
+			</div>
+		</section>
+
+		<!-- Menu Section -->
+		<section id="menu" class="menu">
+			<div class="container">
+				<h2 class="section-title">قائمة الحلويات</h2>
+				<div class="cookie-grid" id="cookieGrid">
+					<!-- Products will be injected by JS -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Cart Drawer -->
+	<div class="cart-drawer" id="cartDrawer">
+		<div class="cart-header">
+			<h3>سلة المشتريات</h3>
+			<button class="close-cart" id="closeCart">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
+		<div class="cart-items" id="cartItems">
+			<!-- Cart items will be injected by JS -->
+		</div>
+		<div class="cart-footer">
+			<div class="cart-total">
+				<span>الإجمالي:</span>
+				<span id="cartTotal">0.00 ر.س</span>
+			</div>
+			<button class="checkout-btn">إتمام الطلب</button>
+		</div>
+	</div>
+
+	<!-- Overlay -->
+	<div class="overlay" id="overlay"></div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<span class="brand">QH Cookies</span>
+					<p>نحن نصنع الكوكيز الذي يغير يومك للأفضل. طعم كأنك في منزلك، بجودة المحترفين.</p>
+					<div class="social-links">
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+						<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+					</div>
+				</div>
+				<div class="footer-links">
+					<h4>روابط سريعة</h4>
+					<ul>
+						<li><a href="#">الرئيسية</a></li>
+						<li><a href="#menu">القائمة</a></li>
+						<li><a href="#">من نحن</a></li>
+						<li><a href="#">تواصل معنا</a></li>
+					</ul>
+				</div>
+				<div class="footer-links">
+					<h4>تواصل معنا</h4>
+					<p><i class="fa-solid fa-location-dot"></i> المملكة العربية السعودية</p>
+					<p><i class="fa-solid fa-phone"></i> +966 500 000 000</p>
+					<p><i class="fa-solid fa-envelope"></i> info@qhcookies.com</p>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>&copy; 2025 جميع الحقوق محفوظة لـ QH Cookies</p>
+			</div>
+		</div>
+	</footer>
 
 </body>
 
