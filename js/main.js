@@ -30,11 +30,12 @@ let cart = [];
 const cookieGrid = document.getElementById("cookieGrid");
 const cartDrawer = document.getElementById("cartDrawer");
 const cartBtn = document.getElementById("cartBtn");
+const mobileCartBtn = document.getElementById("mobileCartBtn");
 const closeCart = document.getElementById("closeCart");
 const overlay = document.getElementById("overlay");
 const cartItemsContainer = document.getElementById("cartItems");
 const cartTotalElement = document.getElementById("cartTotal");
-const cartCountElement = document.querySelector(".cart-count");
+const cartCountElements = document.querySelectorAll(".cart-count");
 const header = document.getElementById("header");
 
 // Functions
@@ -44,6 +45,7 @@ function init() {
 
   // Event Listeners
   cartBtn.addEventListener("click", toggleCart);
+  if (mobileCartBtn) mobileCartBtn.addEventListener("click", toggleCart);
   closeCart.addEventListener("click", toggleCart);
   overlay.addEventListener("click", toggleCart);
 
@@ -108,7 +110,7 @@ function updateCartUI() {
             }" class="cart-item-img">
                 <div class="cart-item-info">
                     <h4>${item.name}</h4>
-                    <span>${item.quantity} x ${item.price.toFixed(2)} ر.s</span>
+                    <span>${item.quantity} x ${item.price.toFixed(2)} ر.س</span>
                 </div>
                 <button onclick="removeFromCart(${
                   item.id
@@ -126,7 +128,7 @@ function updateCartUI() {
 
   // Update Count
   const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-  cartCountElement.textContent = count;
+  cartCountElements.forEach((el) => (el.textContent = count));
 }
 
 function toggleCart() {
